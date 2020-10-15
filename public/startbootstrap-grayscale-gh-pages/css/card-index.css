@@ -1,0 +1,196 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+  }
+
+.info h2, h4, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+.info h2, h4 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    color: #333333;
+  }
+
+.info h2 {
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    margin-bottom: 10px;
+  }
+
+.info p, li {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #555;
+    line-height: 22px;
+  }
+
+.info ul, li {
+    text-decoration: none;
+  }
+
+.info ul {
+    padding-left: 20px;
+  }
+
+.info svg {
+    margin: 0px;
+    min-width: 24px;
+    min-height: 24px;
+  }
+
+
+  .getmasthead .cardContainer{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    min-width: 300px;
+    min-height: 400px;
+    margin: 4px;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+
+  .getmasthead .active {
+    -webkit-transform: translateZ(0px) rotateY(180deg) !important;
+            transform: translateZ(0px) rotateY(180deg) !important;
+  }
+  .getmasthead .active:after {
+    display: none;
+  }
+
+  .getmasthead .card {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    -moz-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform: translateZ(-100px);
+            transform: translateZ(-100px);
+    -webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .getmasthead .card:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1.4);
+  }
+  .getmasthead.card:hover {
+    -webkit-transform: translateZ(0px);
+            transform: translateZ(0px);
+  }
+  .getmasthead .card:hover:after {
+    opacity: 1;
+  }
+  .getmasthead .card .side {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: white;
+  }
+  .getmasthead.card .front {
+    z-index: 2;
+  }
+  .card .back {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  .card .info {
+    padding: 16px;
+  }
+
+  .front .img {
+    background-color: #dadce2;
+    background-position: center;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 250px;
+  }
+
+
+  .back {
+    position: relative;
+  }
+  .back h2 {
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+  .back .reviews {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+  .back .reviews p {
+    color: #c4c4c4;
+    font-weight: 300;
+    margin: 1px 0 0 6px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .back .reviews:hover p {
+    color: #555;
+  }
+  .back li {
+    line-height: 22px;
+    margin: 2px 0 6px 0;
+  }
+  .back .btn {
+    position: absolute;
+    bottom: 16px;
+    width: calc(100% - 32px);
+    height: 56px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    background-color: #FFC324;
+    background-image: -webkit-gradient(linear, right top, left top, from(#FFB714), to(#FFE579));
+    background-image: linear-gradient(-90deg, #FFB714, #FFE579);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .back .btn:hover h4 {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .back .btn:hover svg {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    opacity: 1;
+  }
+  .back .btn h4 {
+    -webkit-transform: translateX(12px);
+            transform: translateX(12px);
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+  }
+  .back .btn svg {
+    margin: 1px 0 0 4px;
+    -webkit-transform: translateX(-8px);
+            transform: translateX(-8px);
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
